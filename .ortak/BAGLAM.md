@@ -1,19 +1,13 @@
-# Bağlam
+# Doğal Türkçe — güncel bağlam
 
-Yazar: `SKILL.md`, `references/*.md`, `README.md`, bu dosya. Kod: `evaluate.py`, `tests/`. `evaluator/` yok.
+Proje https://github.com/ege-arhan/dogal-turkce (public, MIT). Yerel kaynaklar SKILL.md, references/, evaluate.py, tests/, data/pilot.json. Kod yalnız Cursor ile yazıldı; Codex bağımsız inceleme/test.
 
-Beceri, Türkçe yapay anlatım için. Düzenlemeden önce `references/examples.md`. Son metin; sıkışan yer. Okur ve tür durur. Son metin kaynakla kıyaslanır. Koru: olgu, kapsam, olumsuz, kip, nezaket, yükümlülük, terim, kod, URL, sayı. `-miş` yalnız aktarım değildir. Kesinliği düşürme, yargıyı tersine çevirme, iletme ricâsını silme.
+5 Kasım 2026: 11 test geçti; özel dosyaların olmadığı temiz klasörde doğrulandı. Gerçek pilot `.local/pilot-v2`: 8 sentetik Grok kaynak × 4 yönerge =32/32 geçerli son metin. Ham akışlar ve yüzey kontrolleri yeniden doğrulandı. Bu kalite başarısı değil. İlk `.local/pilot` CLI argüman hatası arşivi; sonuç olarak kullanılmaz.
 
-Pilot: `data/pilot.json`, 8 sentetik, Grok, insan değil. Kollar `simple`, `humanizer`, `turkce`, `ours`. Kör A–D.
+Kör kartlar `.local/kor-pilot-01-05.md` ve `06-08.md`. Anahtar private/keys.json: kullanıcı oyları bitene kadar açıklama. İnsan oyu0, rakip/final freeze yok. İlk5 için kullanıcıdan p01 A vb, eşit/hepsi kötü ve anlam hatası beklenir. Oylar evaluate.py vote ile açık kullanıcı yanıtından kaydedilir; uydurulmaz. score yalnız tüm oylar hazırsa. Genel benchmark kişisel profil kapalı.
 
-Hedef final 40 ayrıdır. Eşik finalden önce donar. Aynı kaynak ailesi geliştirme ve finalde birden durmaz. Pilot 24/40 tutmaz. `score` başarı yazmaz. Kartlar JSON.
+Son40 eksik: GPT/Gemini30 kaynak kota nedeniyle toplanmadı;10 gerçek kısa kullanıcı mesajı yerelde (3sohbet,8aynıaile). GenelTürkçeyi temsil etmez. Tam son test pilot öncesinde ayrılmış sayılmaz; son test farklı kaynak aileleriyle ve yönerge sabitlendikten sonra. Kota/hesap değiştirilmez, ek kredi alınmaz.
 
-```text
-python3 -m unittest tests.test_evaluate
-python3 evaluate.py run --cases data/pilot.json --out .local/pilot --arms ours,simple,humanizer,turkce --model grok-4.7-medium --workers 2
-python3 evaluate.py cards --run .local/pilot --out .local/cards.json --limit 5
-python3 evaluate.py vote --run .local/pilot --case p01 --choice A
-python3 evaluate.py score --run .local/pilot
-```
+Tüm ham/özel veri, upstream yönergeler/lisansları, anahtar, oy ve sesprofili `.local/` ve gitignore. GitHuba gitmez. Skill kurulu değil; kıyasları kirletme. Sayı/URL/kod korunumu tekbaşına anlam kanıtı değil.
 
-Planlanan modeller yok. Pilot Grok. Kişisel profil repoda yok; yaklaşık 10 özel ileti temsilî değil, ayrıntı yalnız `.local`. Üst istem, eşleme, oy, insan derlemi `.local`. Lisans özgün MIT, 2026 Ege Arhan. Dış metin kopyalanmaz. TDK üslup ölçütü değildir.
+Komutlar: python3 -m unittest discover -s tests -v; python3 evaluate.py cards --run .local/pilot-v2 --out .local/cards.json --limit 5; python3 evaluate.py vote --run .local/pilot-v2 --case p01 --choice A; python3 evaluate.py score --run .local/pilot-v2.

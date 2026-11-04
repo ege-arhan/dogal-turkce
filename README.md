@@ -65,3 +65,11 @@ curl --fail --location https://raw.githubusercontent.com/bushrabeg/turkce-humani
 İlk çalıştırma gerçek model kotası kullanır: pilotta 8 × 4 = 32 ayrı çağrı. En çok iki çağrı aynı anda yürür. Hata otomatik olarak yeniden denenmez; kayıtlar korunur. Aynı klasörde kaynak/yönerge/model değişikliği reddedilir. Model kullanılabilirliği hesapta ayrıca doğrulanmalıdır. Kişisel profili genel benchmark sırasında yüklemeyin.
 
 Oy verirken en doğal bulduğunuz harfi seçin; tümü eşitse `tie`, tümü kötüyse `bad` kullanın. Anlam hatasını ilgili seçeneğe bağlayın, örneğin `--errors B:omission`. Bu hata işaretleri tercihten ayrı kaydedilir. Otomatik sayı/kod/bağlantı kontrolü yalnız bir uyarı üretir; anlamı bütünüyle doğrulamaz.
+
+## İlk pilotun durumu — 5 Kasım 2026
+
+Sekiz sentetik kaynak, dört yönergeyle aynı yeniden yazma modelinde (`grok-4.7-medium`) çalıştırıldı: 32 çağrıdan 32 geçerli son metin alındı. Ham akışlar yeniden ayrıştırılıp kayıtlarla karşılaştırıldı. Bu yalnız teknik çalıştırma doğrulamasıdır; anlam ve doğallık başarısı değildir. Yüzey kontrolleri değişiklik işaretleyebilir, insan değerlendirmesinin yerini tutmaz.
+
+İlk CLI denemesi, YAML ile başlayan istemin seçenek sanılması nedeniyle durduruldu; argüman ayrımı düzeltildikten sonra ayrı klasörde yeni koşu yapıldı. Eski başarısız koşu sonuçlara katılmadı. Testler: 11 birim testi, özel dosyalar olmadan temiz klasörde de geçti.
+
+Kör kartlar hazırdır; insan oyları henüz beklenmektedir. Bu yüzden rakip seçilmedi, son yönerge dondurulmadı, kalite puanı hesaplanmadı. Planlanan bağımsız 40 metnin 30 GPT/Gemini kaynağı henüz toplanamadı; tam son test kümesinin pilot öncesinde ayrıldığı iddia edilmez. Pilot ve nihai veri kümeleri farklı kaynak ailelerinden kurulacaktır.
