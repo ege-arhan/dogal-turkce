@@ -1,0 +1,74 @@
+[
+  {
+    "id": "p01",
+    "family": "morfoloji",
+    "genre": "explanation",
+    "origin": "llm",
+    "source": "Cursor grok-4.7-low synthetic",
+    "text": "Eğitim kümesinin çoğu 12 bin örnekten geldi; model her sınıfı eşit görmedi. Bazı etiketler hiç çıkmadı. Bu, o sınıfların öğrenildiği anlamına gelmez. Yarınki koşu sonucu değişebilir, bugünkü tablo kalıcı sayılmasın. accuracy alanı 0.81 kaldı. Ayrıntı: https://example.com/rapor/12 Kimse tek denemede tüm hataların kapandığını yazmasın.",
+    "protected": ["12", "0.81", "accuracy", "https://example.com/rapor/12"]
+  },
+  {
+    "id": "p02",
+    "family": "gonderim",
+    "genre": "chat",
+    "origin": "llm",
+    "source": "Cursor grok-4.7-low synthetic",
+    "text": "Dün toplantıda Ayşe dosyayı açtı, Mehmet ise sadece dinledi. O, notları kendisi tutmadı; bunu sonra başkası yaptı. Herkes aynı kararı onayladı sanma. Çoğu kişi çekimser kaldı, birkaçı karşı çıktı. Yarın gelmezsem sen devam et, ben yetişemem. Saat 14:30 ve salon B-2.",
+    "protected": ["14:30", "B-2"]
+  },
+  {
+    "id": "p03",
+    "family": "odak",
+    "genre": "technical",
+    "origin": "llm",
+    "source": "Cursor grok-4.7-low synthetic",
+    "text": "Önbellek hatası her istekte olmuyor. Yalnızca üçüncü yeniden denemede 503 dönüyor; ilk iki çağrı 200. Zaman aşımı 800 ms. Bu, servisin tamamen kapandığı anlamına gelmez. retry_after alanını elle doldurmayın. Ayrıntı kodu E-17, sürüm v2.4.1. Log yarın silinebilir; disc dolmazsa kayıt durur.",
+    "protected": ["503", "200", "800", "retry_after", "E-17", "v2.4.1"]
+  },
+  {
+    "id": "p04",
+    "family": "adlastirma",
+    "genre": "formal",
+    "origin": "llm",
+    "source": "Cursor grok-4.7-low synthetic",
+    "text": "Komisyon, başvuruların çoğunun süresinde ulaştığını, bir kısmının ise eksik belge nedeniyle işleme alınamadığını tespit etmiştir. Başvurunun reddedildiği iddiası dosyada yoktur. Karar kesinleşmiş sayılmaz; itiraz süresi dolmamıştır. İlgili madde 14/3. Başvuru no 2026-TR-441. İtiraz dilekçesi henüz yok. Süre dolmadan dosya kapanmaz.",
+    "protected": ["14/3", "2026-TR-441"]
+  },
+  {
+    "id": "p05",
+    "family": "baglac",
+    "genre": "email",
+    "origin": "llm",
+    "source": "Cursor grok-4.7-low synthetic",
+    "text": "Merhaba Kerem, ekteki tabloyu inceledim. Ancak tüm satırlar hatalı değil; yalnızca KDV sütununda üç satır boş. Ayrıca toplam 14820,60 görünüyor. Bu yüzden gönderimi durdurmadım. Yarın öğleden önce bakabilir misiniz? Dosya Q3-rev2.xlsx ve kur 34,15. Tabloyu olduğu gibi bırakın. KDV oranına dokunmayın.",
+    "protected": ["14820,60", "Q3-rev2.xlsx", "34,15"]
+  },
+  {
+    "id": "p06",
+    "family": "kalip",
+    "genre": "explanation",
+    "origin": "llm",
+    "source": "Cursor grok-4.7-low synthetic",
+    "text": "Kullanıcılar özelliği derinlemesine deneyimlemek zorunda değil. Çoğu kişi yalnızca dışa aktarmayı açar, bazıları hiç kullanmaz. Bu bir oyun değiştirici değildir. Akış export_csv() çağrısıyla biter. Belge https://example.com/csv/v3 Sayılar 2024-11 dönemine aittir. Her hesap etkilenmeyebilir. Zorunlu alan da değil. Eski sürümde düğme yoktu.",
+    "protected": ["export_csv()", "https://example.com/csv/v3", "2024-11"]
+  },
+  {
+    "id": "p07",
+    "family": "cerceve",
+    "genre": "chat",
+    "origin": "llm",
+    "source": "Cursor grok-4.7-low synthetic",
+    "text": "Sorun sende değil; oturum süresi dolunca taslak siliniyor. Her seferinde olmuyor, sadece 15 dakikayı aşınca. Tekrar dener misin, yoksa ben bakayım? Kod SES-4401. Bağlantı https://example.com/oturum/yardim Kayıt hiç oluşmamış da olabilir. Üç deneme yeter. Yarın da aynı kural geçerli. Taslak sunucuda durmuyor.",
+    "protected": ["15", "SES-4401", "https://example.com/oturum/yardim"]
+  },
+  {
+    "id": "p08",
+    "family": "nezaket",
+    "genre": "email",
+    "origin": "llm",
+    "source": "Cursor grok-4.7-low synthetic",
+    "text": "Sayın Demir, raporu bugün iletmenizi rica etmiyorum; cuma 17:00 yeter. Tüm ek hatalı değil, çoğu satır duruyor, iki satır şüpheli. Mümkünse sheet=2 üzerinden bakın. Kesin konuşmuyorum, yerinde kontrol şart. Tel 0212 000 00 00. Onay gelmezse göndermeyin. Cuma öncesi hatırlatma da şart değil.",
+    "protected": ["17:00", "sheet=2", "0212 000 00 00"]
+  }
+]
