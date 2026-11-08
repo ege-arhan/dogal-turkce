@@ -1,0 +1,120 @@
+[
+  {
+    "id": "g01",
+    "family": "uyku",
+    "genre": "chat",
+    "origin": "llm",
+    "source": "cursor-grok-4.5-medium varsayılan yanıtı, Cursor ask modu, 2026-11-08",
+    "source_model": "cursor-grok-4.5-medium",
+    "prompt": "Akşamları bir türlü uyuyamıyorum, ne yapabilirim?",
+    "text": "Uyku hijyeniyle başla — çoğu akşam uykusuzluğu buradan düzelir.\n\n**Akşam rutini**\n- Yatmadan 1–2 saat önce ekranı bırak (telefon/TV mavi ışığı uyanık tutar).\n- Kafein öğleden sonra kes; alkol “uyutuyor” gibi gelse de geceyi böler.\n- Yatak = uyku. Yatakta scroll/iş yok.\n- Aynı saatte yat, aynı saatte kalk — hafta sonu da.\n\n**Uyumadıysan**\n- 20 dakikadır yatıyorsun ve uyku gelmiyor → kalk, loş ışıkta sıkıcı bir şey yap (kitap), uykun gelince dön. Yatakta dönüp “uyumam lazım” diye stres biriktirme.\n\n**Gündüz**\n- Sabah gün ışığı + kısa yürüyüş gece melatonin ritmini düzeltir.\n- Öğleden sonra uzun şekerleme yapma (20 dk’yı geçmesin).\n- Akşam ağır yemek / yoğun egzersiz yatmadan hemen önce zorlaştırır; egzersizi günün erkenine al.\n\n**Zihin durmuyorsa**\n- Yatmadan önce 5 dk endişe listesi yaz: yarın yapılacaklar kağıtta kalsın, kafada değil.\n- Basit nefes: 4 say sayarak al, 6–8 sayarak ver.\n\nBirkaç haftadır her gece böyleyse, gündüz aşırı yorgunluk / horlama / nefes kesilmesi varsa doktora danış — bu genel tavsiye, tıbbi teşhis değil.\n\nEn hızlı kazanım genelde: **sabit uyku saati + yatmadan önce ekranı kesmek**.",
+    "protected": []
+  },
+  {
+    "id": "g02",
+    "family": "kedi-istah",
+    "genre": "chat",
+    "origin": "llm",
+    "source": "cursor-grok-4.6-medium varsayılan yanıtı, Cursor ask modu, 2026-11-08",
+    "source_model": "cursor-grok-4.6-medium",
+    "prompt": "Kedim son günlerde mamasını yemiyor, endişelenmeli miyim?",
+    "text": "Kısa cevap: **evet, endişelenmek doğru.** Kediler “birkaç gün atlarım” hayvanı değil. Yememe çoğu zaman hastalık belirtisidir; özellikle kilolu kedilerde 2–3 gün açlık karaciğer yağlanması (hepatik lipidoz) riski taşır.\n\n**Ne kadar süredir?**\n- **1 öğün / yarım gün:** stres, mama değişimi, koku, diş hassasiyeti olabilir. İzle.\n- **24 saat neredeyse hiç yemedi:** veteriner ara.\n- **48 saat+:** acil. Evde bekletme.\n\n**Hemen git (süre kısa olsa da):** kusma, ishal, salya, ağız kokusu, nefes darlığı, halsizlik, saklanma, idrar yapmama / çok idrar, susuz görünme, kilo kaybı, sarılık (göz/diş eti sarı).\n\n**Evde bak:** su içiyor mu, kaka/idrar var mı, mama/yer değişti mi, başka kedi baskısı var mı, diş/ağız acıyor gibi mi (yüzünü tutuyor, kuru mama reddi).\n\nIslak mama, ısıtılmış mama, elden birkaç parça teklif etmek denenebilir; **zorla yedirme, insan yemeği, ağrı kesici, ekstra vitamin** yok.\n\nBu tıbbi tanı değil. Yememe 24 saati geçtiyse veya eşlik eden belirti varsa veteriner (mümkünse acil) doğru adres.",
+    "protected": [
+      "hepatik lipidoz"
+    ]
+  },
+  {
+    "id": "g03",
+    "family": "kara-delik",
+    "genre": "explanation",
+    "origin": "llm",
+    "source": "composer-2.5 varsayılan yanıtı, Cursor ask modu, 2026-11-08",
+    "source_model": "composer-2.5",
+    "prompt": "Kara delikler neden ışığı bile kaçırmaz?",
+    "text": "Kısa cevap: **yeterince derin bir yerçekimi kuyusu** oldukları için.\n\n## Yerçekimi ve kaçış hızı\n\nHer kütleli cisimin bir **kaçış hızı** vardır: o noktadan uzaya fırlatılması gereken minimum hız. Kütle arttıkça veya yarıçap küçüldükçe bu hız artar.\n\nKara delik, çok büyük kütlenin çok küçük bir hacme sıkışmasıdır. Belirli bir sınırın (**olay ufku**) içinde kaçış hızı **ışık hızını (c) aşar**. Işık da bir tür “kaçış” girişimidir; hızı sabit olduğundan o bölgeden dışarı çıkamaz.\n\n## Işık “yavaşlamıyor”\n\nYanlış algı: ışık yerçekiminde yavaşlar. Genel görelilikte ışık **her yerde yerel olarak c ile** gider. Sorun şu: uzay-zaman o kadar **eğrilmiştir** ki ışığın yolları dışarı çıkmaya değil, içeri doğru kapanır. Dışarıdan bakınca ışık sonsuza dek “yutuluyor” gibi görünür; aslında olay ufkunun içinde kurtuluş yolu yoktur.\n\n## Neden “kara”?\n\nDışarıya ışık yansıtıp yayamadıkları için görünmezler; yalnızca çevredeki maddeye, yıldızlara veya yerçekimsel mercekleme etkisine bakarak anlarız.\n\n## Özet\n\nKara delikler ışığı “çeker ve tutar” diye değil, **kaçış hızının c’yi geçtiği** bir bölge oluşturdukları için ışık bile o bölgeden çıkamaz. Bu yüzden kara deliklere giren ışık dışarıya ulaşamaz; “ışığı bile kaçırmaz” derken kastedilen budur.",
+    "protected": []
+  },
+  {
+    "id": "g04",
+    "family": "tanzimat",
+    "genre": "explanation",
+    "origin": "llm",
+    "source": "cursor-grok-4.6-medium varsayılan yanıtı, Cursor ask modu, 2026-11-08",
+    "source_model": "cursor-grok-4.6-medium",
+    "prompt": "Osmanlı'da Tanzimat Fermanı neden önemlidir?",
+    "text": "Tanzimat Fermanı (Gülhane Hatt-ı Hümayunu, 1839) önemlidir çünkü Osmanlı’yı klasik “padişahın tebaası” düzeninden, yazılı hukukla tanımlanan vatandaşlık düzenine çekmeye çalışır.\n\n**Ne değişti?**\n- Can, mal, namus güvencesi padişahın lütfu değil, ilan edilmiş hak olarak yazıldı.\n- Vergi ve askerlik keyfi olmaktan çıkıp kurala bağlanacaktı.\n- Müslüman / gayrimüslim ayrımı hukuken zayıflatıldı; eşitlik vaadi resmi metne girdi.\n- Avrupa’ya “reform eden devlet” mesajı verildi; borç, diplomatik baskı ve iç çöküş ortamında hayatta kalma stratejisiydi.\n\n**Neden dönüm noktası?**\nOndan sonra Islahat Fermanı (1856), Meclis-i Vala, nizamnameler, vilayet sistemi, Maarif, Adliye gibi kurumlar bu hattın üzerine kuruldu. 1876 Kanun-i Esasi’nin zemini burasıdır.\n\n**Sınır:** Ferman tek başına modern devlet yapmadı. Uygulama eşitsiz kaldı, ayan ve ulema direndi, kapitülasyonlar ve milletsel gerilim sürdü. Önemi vaadin tam gerçekleşmesi değil, **devletin kendini hukuka bağlamayı ilk kez resmi politika yapması**.",
+    "protected": [
+      "Gülhane Hatt-ı Hümayunu"
+    ]
+  },
+  {
+    "id": "g05",
+    "family": "odev-uzatma",
+    "genre": "email",
+    "origin": "llm",
+    "source": "composer-2.5 varsayılan yanıtı, Cursor ask modu, 2026-11-08",
+    "source_model": "composer-2.5",
+    "prompt": "Hocama ödev teslim tarihini bir hafta uzatmasını rica eden bir e-posta yaz.",
+    "text": "Aşağıda hocanıza gönderebileceğiniz örnek bir e-posta var. Adınızı, ders adını ve ödevi kendi bilgilerinizle değiştirmeniz yeterli.\n\n---\n\n**Konu:** [Ders adı] – Ödev teslim tarihi uzatma talebi\n\nSayın Hocam,\n\n[Dersten / ders kodundan bahsedebilirsiniz, örneğin: “… dersinde verilen … ödevi”] ile ilgili olarak sizinle iletişime geçiyorum.\n\nMevcut teslim tarihi [örnek: 15 Kasım 2026] olmak üzere planlanan ödevi zamanında tamamlayamayacağımı üzülerek belirtmek isterim. [Kısa ve samimi bir gerekçe yazın: sağlık, ailevi durum, başka derslerde yoğunluk, teknik sorun vb. Ayrıntıyı abartmadan, bir–iki cümle yeterli.]\n\nBu nedenle teslim tarihinin bir hafta uzatılmasını (yeni tarih: [örnek: 22 Kasım 2026]) mümkünse rica ederim. Ödevin gerektirdiği çalışmayı bu süre içinde eksiksiz tamamlamayı taahhüt ederim.\n\nOlumlu veya olumsuz her türlü geri dönüşünüz için şimdiden teşekkür ederim.\n\nSaygılarımla,  \n[Adınız Soyadınız]  \n[Öğrenci numaranız]  \n[İletişim: e-posta / telefon, isteğe bağlı]\n\n---\n\n**Kısa ipuçları**\n\n- Konu satırında ders adı veya kodu olsun; hocanın gelen kutusunda aramayı kolaylaştırır.  \n- Gerekçeyi dürüst ve ölçülü tutun; gereksiz uzun açıklama okumayı zorlaştırır.  \n- Uzatma istediğiniz yeni tarihi net yazın.  \n- Teslimden önce yazmak, son güne bırakmaktan daha iyidir.\n\nDaha resmi veya daha kısa bir versiyon isterseniz söyleyin; ona göre uyarlayabilirim.",
+    "protected": []
+  },
+  {
+    "id": "g06",
+    "family": "fatura-duzeltme",
+    "genre": "email",
+    "origin": "llm",
+    "source": "composer-2.5 varsayılan yanıtı, Cursor ask modu, 2026-11-08",
+    "source_model": "composer-2.5",
+    "prompt": "Tedarikçiye faturadaki hatalı tutarı düzeltmesini isteyen bir e-posta yaz.",
+    "text": "Konu: Fatura düzeltme talebi – [Fatura No] / [Tarih]\n\nSayın [Tedarikçi Yetkili Adı / Firma Adı],\n\n[GG.AA.YYYY] tarihli, [Fatura No] numaralı faturanızı inceledik. Faturada yer alan tutar ile siparişimiz / anlaşmamız / teslim aldığımız kalemler uyuşmamaktadır.\n\n**Tespit edilen fark**\n- Faturadaki tutar: [____] [TL/USD/EUR]\n- Olması gereken tutar: [____] [TL/USD/EUR]\n- Fark: [____] [TL/USD/EUR]\n\n[Kısa açıklama: örn. KDV hesabı, birim fiyat, miktar, iskonto veya ek kalemler kaynaklı olabilir.]\n\nBu nedenle faturanın **düzeltilmiş (iptal–yenileme veya düzeltme faturası)** olarak tarafımıza iletilmesini rica ederiz. Düzeltilmiş faturayı mümkünse **[e-posta adresi / e-fatura / portal]** üzerinden göndermenizi bekliyoruz.\n\nSorularınız olursa [Ad Soyad], [telefon], [e-posta] ile iletişime geçebilirsiniz.\n\nİyi çalışmalar dileriz.\n\nSaygılarımızla,  \n[Ad Soyad]  \n[Ünvan]  \n[Şirket Adı]  \n[Telefon] | [E-posta]\n\n---\n\n**Ek notlar (isterseniz ekleyin):**\n- Sipariş / sözleşme referansı: [PO No / Sözleşme No]\n- Ödeme bu fatura düzeltilene kadar bekletilecektir. *(sadece politikanız buysa)*\n\nPlaceholder’ları doldurup göndermeniz yeterli; ton resmi ve net. İsterseniz daha kısa veya daha sert bir versiyon da yazabilirim.",
+    "protected": []
+  },
+  {
+    "id": "g07",
+    "family": "git-rebase",
+    "genre": "technical",
+    "origin": "llm",
+    "source": "cursor-grok-4.5-medium varsayılan yanıtı, Cursor ask modu, 2026-11-08",
+    "source_model": "cursor-grok-4.5-medium",
+    "prompt": "Git'te rebase ile merge arasındaki fark nedir?",
+    "text": "**Merge**, dalları birleştirirken geçmişi olduğu gibi bırakır. Ortak atadan sonra iki dalın işleri yan yana durur; birleştirme bir **merge commit** ile bağlanır. Tarihçe dallı kalır.\n\n**Rebase**, senin commit’lerini hedef dalın *üstüne* yeniden yazar. Ortak atadan sonraki commit’lerin sırayla yeniden uygulanır; geçmiş düz bir çizgi gibi görünür. Commit hash’leri değişir.\n\nKısaca:\n- **Merge** → “ikisini birleştir, geçmişi koru”\n- **Rebase** → “benim işlerimi seninkilerin üstüne taşı, geçmişi düzleştir”\n\nPaylaşılan (push edilmiş) branch’te rebase dikkat ister; başkalarının o commit’lere dayandığı yerde sorun çıkarabilir.",
+    "protected": [
+      "merge commit"
+    ]
+  },
+  {
+    "id": "g08",
+    "family": "docker-vm",
+    "genre": "technical",
+    "origin": "llm",
+    "source": "cursor-grok-4.5-medium varsayılan yanıtı, Cursor ask modu, 2026-11-08",
+    "source_model": "cursor-grok-4.5-medium",
+    "prompt": "Docker container ile sanal makine arasındaki fark nedir?",
+    "text": "**Kısa cevap:** VM tüm işletim sistemini sanallaştırır; container ise host OS’in çekirdeğini paylaşır, sadece uygulama + bağımlılıkları izole eder.\n\n| | **Sanal Makine (VM)** | **Docker Container** |\n|---|---|---|\n| **Ne sanallaşır** | Donanım + tüm OS | Uygulama katmanı (process izolasyonu) |\n| **Kernel** | Kendi guest OS kernel’i | Host kernel’i paylaşır |\n| **Boyut / başlangıç** | GB’lar, dakika | MB’lar, saniye |\n| **İzolasyon** | Güçlü (ayrı OS) | Daha hafif (namespaces, cgroups) |\n| **Kaynak kullanımı** | Daha ağır | Daha verimli |\n\n**Ne zaman hangisi?**\n- Tam ayrı OS, farklı kernel, güçlü izolasyon → **VM**\n- Aynı kernel, hızlı deploy, çok servis yan yana → **Container**\n\nÖzet: VM = “küçük bilgisayar”; container = “paketlenmiş process”.",
+    "protected": [
+      "namespaces, cgroups"
+    ]
+  },
+  {
+    "id": "g09",
+    "family": "aidat",
+    "genre": "formal",
+    "origin": "llm",
+    "source": "cursor-grok-4.5-medium varsayılan yanıtı, Cursor ask modu, 2026-11-08",
+    "source_model": "cursor-grok-4.5-medium",
+    "prompt": "Bir apartman yönetiminin aidat artışına ilişkin bilgilendirme yazısını yaz.",
+    "text": "**KONU:** 2026 Aidat Artışı Hakkında Bilgilendirme\n\nSayın Site / Apartman Sakinleri,\n\nYönetim Kurulu olarak, ortak giderlerdeki artışlar nedeniyle 2026 yılı aidat tutarında güncelleme yapılması gerektiğini bilgilerinize sunarız.\n\nElektrik, su, asansör bakımı, temizlik, güvenlik, sigorta ve genel bakım kalemlerindeki maliyet artışları nedeniyle **[ay/yıl]** itibarıyla aylık aidat tutarı **[eski tutar] TL**’den **[yeni tutar] TL**’ye yükseltilmiştir.\n\nYeni tutar, **[ödeme günü]** tarihinden itibaren geçerlidir. Ödemelerinizin zamanında yapılması, hizmetlerin aksamadan sürdürülmesi açısından önem taşımaktadır.\n\nSorularınız için yönetim ile iletişime geçebilirsiniz.\n\nSaygılarımızla,  \n**[Apartman / Site Adı] Yönetim Kurulu**  \n**[Tarih]**  \n**[İletişim]**",
+    "protected": []
+  },
+  {
+    "id": "g10",
+    "family": "veli-toplantisi",
+    "genre": "formal",
+    "origin": "llm",
+    "source": "composer-2.5 varsayılan yanıtı, Cursor ask modu, 2026-11-08",
+    "source_model": "composer-2.5",
+    "prompt": "Bir okulun velilere veli toplantısı tarihini bildiren resmi yazısını hazırla.",
+    "text": "Veli toplantısı tarihini duyuran resmi yazı örneği aşağıdadır. Köşeli parantez içindeki alanları okulunuza göre doldurun.\n\n---\n\n**[OKUL ADI]**  \n**[İlçe] Millî Eğitim Müdürlüğüne Bağlı [Tür: İlkokul / Ortaokul / Lise]**  \n**Adres:** [Okul adresi]  \n**Telefon:** [Telefon] | **E-posta:** [E-posta] | **KEP:** [Varsa KEP adresi]  \n\n**Sayı:** [Yıl]/[Okul kodu veya birim]/[Sıra no]  \n**Konu:** Veli Toplantısı  \n\n**Tarih:** [Yazının tarihi]\n\n---\n\n**Sayın Velilerimiz,**\n\n[Bahar / Güz] dönemi veli toplantımız **[gün, ay yıl]**, **[saat]**’te okulumuzda yapılacaktır.\n\nToplantıda öğrencilerimizin akademik durumu, devam-devamsızlık, disiplin ve sosyal gelişimleri ile dönem içi etkinlikler değerlendirilecek; velilerimizin görüş ve önerileri alınacaktır.\n\nVelilerimizin zamanında katılımı, iş birliğimizin sürdürülmesi açısından önemlidir. Toplantıya katılamayacak velilerimizin **[gün, ay yıl]** tarihine kadar sınıf öğretmeni / rehber öğretmen ile iletişime geçmeleri rica olunur.\n\nGereğini bilgilerinize arz ederim.\n\nSaygılarımla,\n\n**[Ad Soyad]**  \n**Okul Müdürü**\n\n---\n\n**Not (iç kullanım / ek bilgi):**  \n- Toplantı yeri farklıysa (ör. konferans salonu): metne “**[Yer]** salonunda” ekleyin.  \n- Online veya hibrit ise: platform ve bağlantı bilgisini ayrı paragraf olarak yazın.  \n- İmza için müdür yardımcısı veya zümre başkanı dağıtım yapıyorsa, dağıtım listesini kurum içi prosedüre göre düzenleyin.\n\nİsterseniz ilkokul, ortaokul veya lise için daha kısa bir “veli bilgilendirme metni” (SMS/e-Okul duyurusu) de yazabilirim; okul türü ve toplantı tarihini yazmanız yeterli.",
+    "protected": []
+  }
+]

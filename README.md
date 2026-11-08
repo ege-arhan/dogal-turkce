@@ -1,75 +1,110 @@
 # dogal-turkce
 
-Türkçe yapay anlatımı düzenlemek için deneysel bir beceri. Genel yazım düzelticisi değildir. Ölçülmüş kalite, kullanıcı oyu veya model başarısı iddiası yoktur. Depo: [ege-arhan/dogal-turkce](https://github.com/ege-arhan/dogal-turkce). Metin özgün MIT’tir, © 2026 Ege Arhan. İncelenen dış depoların metni kopyalanmaz.
+Yapay zekânın yazdığı Türkçe metni, anlamına dokunmadan insan eli değmiş gibi okunur hâle getiren bir beceri (skill). Claude Code, Cursor ve Codex'te çalışır.
 
-Genel çekirdek `SKILL.md` içindedir. Düzenlemeden önce `references/examples.md` okunur. İsteğe bağlı kişisel ses yalnız yerel profilde durur; genel testte kapalıdır. Özel örneklem kısa görev mesajlarıyla sınırlıdır; genel Türkçeyi temsil etmez ve bu depoda yayımlanmaz.
+İngilizce için yazılmış "humanizer" becerileri Türkçede iyi sonuç vermiyor. Kurallarının bir kısmı Türkçeye uymuyor: özneyi düşürmek Türkçede kusur değil, dilbilgisinin kendisi; edilgen çatı resmî yazıda olağan; `-miş` ile `-di` arasındaki fark anlam taşır. Türkçe modellerin kendine özgü kalıpları da o listelerde yok: "önemli bir rol oynar", "-mektedir" yığını, "sağlar" ve "yardımcı olur" bolluğu, çeviri kokan "sahip olmak". Bu proje sıfırdan, Türkçe için yazıldı.
 
-Planlanan modeller şu an yok. Pilot `data/pilot.json`: 8 sentetik kayıt, Grok (Cursor grok-4.7-low). İnsan örneği değildir.
+## Ne yapar
+
+```text
+Önce:
+Harika bir soru! Kitap okuma alışkanlığı kazanmak, kişisel gelişim yolculuğunuzda son derece
+önemli bir rol oynar. İşte size yardımcı olabilecek bazı etkili ipuçları:
+
+- **Küçük başlayın:** Günde sadece 10 sayfa okuyarak başlayabilirsiniz — bu, alışkanlığın
+  sürdürülebilir olmasını sağlar.
+- **Sabit bir zaman belirleyin:** Her gün aynı saatte okumak, beyninizin bu aktiviteyi bir
+  rutin olarak algılamasına yardımcı olur.
+...
+Unutmayın, önemli olan miktar değil, süreklilik! 📚 Umarım bu öneriler işinize yarar.
+
+Sonra:
+Günde 10 sayfayla başlayabilirsiniz. Bu kadar az olunca sürdürmek kolaylaşır.
+
+- Her gün aynı saatte okuyun; okumak zamanla rutine dönüşür.
+...
+Önemli olan çok okumak değil, her gün okumak.
+```
+
+Övgülü açılış, şişirme, kalın etiketli maddeler, uzun tire, slogan kapanış, emoji ve yardım dileği gider. Sayı, hitap ("siz"), önerilerin hepsi ve asıl fikir kalır. Beş türden tam örnek [references/ornekler.md](references/ornekler.md) içinde.
+
+Beceri bir editör gibi çalışır, yeni bilgi eklemez. Olguları, sayıları, kapsamı ("çoğu" ile "tüm" aynı şey değil), olumsuzluğu, kipi, zaman ekini, hitabı, kodu, bağlantıları ve yer tutucuları korur. Metinde belirgin bir yapay kalıp yoksa olduğu gibi bırakır.
 
 ## Kurulum
 
-Beceri klasörünün adı `dogal-turkce` olur. İçinde `SKILL.md` ve `references/` durur. Başka dosya gerekmez.
+Klasörü kopyalamak yeter. `scripts/` isteğe bağlıdır; düzenleme sonrası otomatik kontrol için gerekir.
 
-Cursor, proje veya kullanıcı:
+Claude Code (kullanıcı geneli):
 
-```text
-mkdir -p .cursor/skills/dogal-turkce
-cp SKILL.md .cursor/skills/dogal-turkce/
-cp -R references .cursor/skills/dogal-turkce/
+```bash
+git clone https://github.com/ege-arhan/dogal-turkce.git /tmp/dogal-turkce && mkdir -p ~/.claude/skills/dogal-turkce && cp -R /tmp/dogal-turkce/SKILL.md /tmp/dogal-turkce/references /tmp/dogal-turkce/scripts ~/.claude/skills/dogal-turkce/
 ```
 
-```text
-mkdir -p ~/.cursor/skills/dogal-turkce
-cp SKILL.md ~/.cursor/skills/dogal-turkce/
-cp -R references ~/.cursor/skills/dogal-turkce/
+Cursor (proje içinde `.cursor/skills/`, kullanıcı geneli için `~/.cursor/skills/`):
+
+```bash
+mkdir -p .cursor/skills/dogal-turkce && cp -R /tmp/dogal-turkce/SKILL.md /tmp/dogal-turkce/references /tmp/dogal-turkce/scripts .cursor/skills/dogal-turkce/
 ```
 
 Codex:
 
-```text
-mkdir -p ~/.codex/skills/dogal-turkce
-cp SKILL.md ~/.codex/skills/dogal-turkce/
-cp -R references ~/.codex/skills/dogal-turkce/
+```bash
+mkdir -p ~/.codex/skills/dogal-turkce && cp -R /tmp/dogal-turkce/SKILL.md /tmp/dogal-turkce/references /tmp/dogal-turkce/scripts ~/.codex/skills/dogal-turkce/
 ```
 
-Ölçüm koşusunda bu beceriyi yargı modeline önceden yükleme. Karşılaştırma, beceriyi görmeyen kolla karışmasın.
+Beceri desteği olmayan bir araçta `SKILL.md`, `references/kaliplar.md` ve `references/ornekler.md` dosyalarını sistem istemine eklemek de işe yarar.
 
-## Koşu
+## Kullanım
 
-Ayrıntı `references/protocol.md`. Hedef final 40 kayıttır ve eşik önceden donar. Bugünkü komutlar 8’lik pilotu çalıştırır. Kart çıktısı `.json` dosyasıdır.
+Metni verip "doğallaştır", "insanlaştır", "yapay zekâ kokusunu gider" ya da "bu metin çok yapay duruyor" demek yeterli. İsteğe bağlı olarak okuru, tonu, hitabı (sen/siz) ve yoğunluğu (`tam` ya da `hafif`) belirtebilirsiniz. `hafif` yalnız güçlü kalıpları temizler.
 
-```text
+Kendi üslubunuza yaklaştırmak isterseniz [references/profil.md](references/profil.md) şablonuyla bir profil hazırlayın ve depo dışında tutun.
+
+## Kontrol aracı
+
+`scripts/kontrol.py` yalnız Python standart kütüphanesiyle çalışır. Kalıp kataloğunu ([references/kaliplar.json](references/kaliplar.json)) tarar ve düzenlemede korunması gereken parçaların değişip değişmediğine bakar.
+
+```bash
+python3 scripts/kontrol.py tara metin.txt --tur chat
+```
+
+```bash
+python3 scripts/kontrol.py karsilastir kaynak.txt cikti.txt --tur email
+```
+
+`tara` her bulguyu kalıp kimliğiyle listeler ve 100 sözcük başına ağırlıklı yoğunluk verir. `karsilastir` iki metnin yoğunluğunu karşılaştırır; sayı, bağlantı, kod bloğu, satır içi kod veya yer tutucu kaybolduysa ya da değiştiyse çıkış kodu 1 olur. Bu araç bir yapay zekâ dedektörü değildir. Kalıp sayısı düşük bir metin kötü yazılmış olabilir; anlamı yine insan okumalıdır.
+
+Türler: `chat`, `explanation`, `email`, `technical`, `formal`. Bazı kalıpların ağırlığı türe göre değişir; örneğin `-mektedir` resmî yazıda sayılmaz.
+
+## Değerlendirme
+
+Değerlendirme düzeni [references/protocol.md](references/protocol.md) içinde. Kısaca:
+
+1. Geliştirme pilotu: 10 gerçek model çıktısı, beş kol (bu beceri, tek cümlelik basit istem, blader/humanizer, bushrabeg/turkce-humanizer, insanca). Aynı yeniden yazma modeli, kör kartlar.
+2. Pilottan sonra beceri ve rakip kol dondurulur; dosya özetleri kaydedilir.
+3. Final: önceden ayrılmış ve mühürlenmiş 40 metin (30 model çıktısı, 2019 öncesinden 10 insan metni). Bu beceri ile donmuş rakip, kör A/B karşılaştırmasıyla yarışır.
+
+Otomatik ölçümler (kalıp yoğunluğu, korunan parça farkı, benzerlik) ve ayrı bir yargıç model yalnız yardımcı sinyaldir. Başarı kararını insan oyu verir.
+
+## Durum
+
+8 Kasım 2026 itibarıyla 10 gerçek model çıktısıyla geliştirme pilotu tamamlandı. Yardımcı sinyaller olumlu:
+
+- Bu becerinin çıktılarında sayı, bağlantı, kod ya da yer tutucu değişikliği yok (0/10). Rakip kollarda 1-4 uyarı var; çoğu zararsız biçim farkı, ikisi metni hiç vermeyen yanıt.
+- Ayrı bir yargıç model doğallığa 5 üzerinden 4,2 verdi (en yakın rakipler 4,1 ve 4,0). Anlamı 10 çıktının 10'unda korunmuş buldu. En yakın iki rakipte anlam 10 çıktının 5'inde ve 8'inde kaymıştı.
+
+İnsan oylaması bekleniyor. Final testi henüz koşulmadı; bu yüzden depoda bir üstünlük iddiası yok. Ayrıntılar [references/protocol.md](references/protocol.md) dosyasının "Sonuçlar" bölümünde.
+
+Bilinen sınırlar: kaynak metinler Grok ve Composer modellerinden geliyor (GPT, Gemini ve Claude çıktıları kota nedeniyle toplanamadı). Yeniden yazma ve yargıç modeli aynı aileden. Cursor'ın kendi gizli sistem istemi tüm kolları aynı biçimde etkiliyor.
+
+## Geliştirme
+
+```bash
 python3 -m unittest discover -s tests -v
-python3 evaluate.py run --cases data/pilot.json --out .local/pilot --arms ours,simple,humanizer,turkce --model grok-4.7-medium --workers 2
-python3 evaluate.py cards --run .local/pilot --out .local/cards.json --limit 5
-python3 evaluate.py vote --run .local/pilot --case p01 --choice A
-python3 evaluate.py score --run .local/pilot
 ```
 
-`score` bir başarı cümlesi üretmez. Pilot skoru bir eşik dondurabilir. Final koşusu `--stage test` ve o dondurulmuş dosyayı ister; tam veri kümesi olmadan kurulmaz.
+Değerlendirme hattı `evaluate.py` içinde: `run`, `cards`, `vote`, `judge`, `score`, `freeze`. Ham çıktılar, oylar ve kişisel veriler `.local/` altında kalır ve depoya girmez. Rakip becerilerin indirilmesi ve sabit sürümleri [references/research.md](references/research.md) içinde.
 
-Ayrıntı: `references/research.md`, `references/protocol.md`, `references/examples.md`. Sabit dış inceleme komutları `references/research.md` içindedir. Lisans: MIT, 2026 Ege Arhan.
+## Lisans
 
-## Karşılaştırma kaynaklarını hazırlama
-
-Pilot dört kolu çalıştırmak için dış yönergeleri yerelde tutar. Aşağıdaki dosyalar yayımlanmaz; kullanım koşulları için kendi lisansları yanlarında bulunur. `curl` ve kimliği doğrulanmış Cursor CLI gerekir. Mevcut dosyaların üstüne indirmeden önce yeni bir klasör kullanın.
-
-```sh
-mkdir -p .local/upstream/humanizer .local/upstream/turkce-humanizer
-curl --fail --location https://raw.githubusercontent.com/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/SKILL.md -o .local/upstream/humanizer/SKILL.md
-curl --fail --location https://raw.githubusercontent.com/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/LICENSE -o .local/upstream/humanizer/LICENSE
-curl --fail --location https://raw.githubusercontent.com/bushrabeg/turkce-humanizer/65a1a4107029ed5b5a72bc226f4937d236214484/SKILL.md -o .local/upstream/turkce-humanizer/SKILL.md
-curl --fail --location https://raw.githubusercontent.com/bushrabeg/turkce-humanizer/65a1a4107029ed5b5a72bc226f4937d236214484/LICENSE -o .local/upstream/turkce-humanizer/LICENSE
-```
-
-İlk çalıştırma gerçek model kotası kullanır: pilotta 8 × 4 = 32 ayrı çağrı. En çok iki çağrı aynı anda yürür. Hata otomatik olarak yeniden denenmez; kayıtlar korunur. Aynı klasörde kaynak/yönerge/model değişikliği reddedilir. Model kullanılabilirliği hesapta ayrıca doğrulanmalıdır. Kişisel profili genel benchmark sırasında yüklemeyin.
-
-Oy verirken en doğal bulduğunuz harfi seçin; tümü eşitse `tie`, tümü kötüyse `bad` kullanın. Anlam hatasını ilgili seçeneğe bağlayın, örneğin `--errors B:omission`. Bu hata işaretleri tercihten ayrı kaydedilir. Otomatik sayı/kod/bağlantı kontrolü yalnız bir uyarı üretir; anlamı bütünüyle doğrulamaz.
-
-## İlk pilotun durumu — 5 Kasım 2026
-
-Sekiz sentetik kaynak, dört yönergeyle aynı yeniden yazma modelinde (`grok-4.7-medium`) çalıştırıldı: 32 çağrıdan 32 geçerli son metin alındı. Ham akışlar yeniden ayrıştırılıp kayıtlarla karşılaştırıldı. Bu yalnız teknik çalıştırma doğrulamasıdır; anlam ve doğallık başarısı değildir. Yüzey kontrolleri değişiklik işaretleyebilir, insan değerlendirmesinin yerini tutmaz.
-
-İlk CLI denemesi, YAML ile başlayan istemin seçenek sanılması nedeniyle durduruldu; argüman ayrımı düzeltildikten sonra ayrı klasörde yeni koşu yapıldı. Eski başarısız koşu sonuçlara katılmadı. Testler: 11 birim testi, özel dosyalar olmadan temiz klasörde de geçti.
-
-Kör kartlar hazırdır; insan oyları henüz beklenmektedir. Bu yüzden rakip seçilmedi, son yönerge dondurulmadı, kalite puanı hesaplanmadı. Planlanan bağımsız 40 metnin 30 GPT/Gemini kaynağı henüz toplanamadı; tam son test kümesinin pilot öncesinde ayrıldığı iddia edilmez. Pilot ve nihai veri kümeleri farklı kaynak ailelerinden kurulacaktır.
+MIT, © 2026 Ege Arhan. İncelenen dış depolardan kural listesi veya örnek kopyalanmadı.
